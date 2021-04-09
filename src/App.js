@@ -31,11 +31,11 @@ class App extends Component {
         return (
             <div className="container">
 
-                <Card titulo="Exemplo Número Aleatório">
+                <Card titulo="#01 Exemplo Número Aleatório">
                 <NumberRandom max={20} min={1}></NumberRandom>
                 </Card>
 
-                <Card titulo="Exemplo formulário">
+                <Card titulo="#02 Exemplo formulário">
                     <Table characterData={characters} removeCharacter={this.removeCharacter} />
                     <Form handleSubmit={this.handleSubmit}></Form>
                 </Card>
