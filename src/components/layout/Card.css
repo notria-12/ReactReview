@@ -1,14 +1,17 @@
 .card{
-    background-color: red;
-    border: 3px solid red;
+    background-color: rgb(37, 141, 201);
+    border: 3px solid rgb(37, 141, 201);
     border-radius: 10px;
     overflow: hidden;
+    margin: 10px 0px;
 }
 
 .title{
     padding:  5px 0px;
     display: flex;
     justify-content: center;
+    color: #fff;
+    font-weight: 600;
 }
 
 .card .content{

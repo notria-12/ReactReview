@@ -6,7 +6,9 @@ export default props => {
         <div className="card">
             
             <div className="title">{props.titulo}</div>
-            <div className="content">{props.conteudo}</div>
+            <div className="content">
+                {props.children}
+            </div>
 
         </div>
     )
