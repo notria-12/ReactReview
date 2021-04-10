@@ -1,9 +1,12 @@
 .card{
-    background-color: rgb(37, 141, 201);
-    border: 3px solid rgb(37, 141, 201);
+    
+    border: 3px solid;
     border-radius: 10px;
     overflow: hidden;
-    margin: 10px 0px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
 }
 
 .title{
@@ -15,6 +18,7 @@
 }
 
 .card .content{
+    flex: 1;
     background-color: #fff;
     color: #000;
     padding:  20px;

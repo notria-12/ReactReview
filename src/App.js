@@ -3,6 +3,11 @@ import Table from './Table'
 import Form from './Form'
 import NumberRandom from './components/NumberRandom'
 import Card from './components/layout/Card'
+import './App.css'
+import Familia from './components/Familia'
+import FamiliaMembro from './components/FamiliaMembro'
+import ListaAlunos from './components/repeticao/ListaAlunos'
+import TabelaProdutos from './components/repeticao/TabelaProdutos'
 
 class App extends Component {
     state = {
@@ -31,14 +36,34 @@ class App extends Component {
         return (
             <div className="container">
 
-                <Card titulo="#01 Exemplo Número Aleatório">
-                <NumberRandom max={20} min={1}></NumberRandom>
-                </Card>
+                <div className="cards">
+                    <Card titulo="#01 Exemplo Número Aleatório" color="#080">
+                        <NumberRandom max={20} min={1}></NumberRandom>
+                    </Card>
 
-                <Card titulo="#02 Exemplo formulário">
-                    <Table characterData={characters} removeCharacter={this.removeCharacter} />
-                    <Form handleSubmit={this.handleSubmit}></Form>
-                </Card>
+                    <Card titulo="#02 Exemplo formulário">
+                        <Table characterData={characters} removeCharacter={this.removeCharacter} />
+                        <Form handleSubmit={this.handleSubmit}></Form>
+                    </Card>
+
+                    <Card titulo="#03 Elementos FIlhos">
+                        <Familia sobrenome="Sousa">
+                            <FamiliaMembro nome="Airton" ></FamiliaMembro>
+                            <FamiliaMembro nome="Ailane" ></FamiliaMembro>
+                            <FamiliaMembro nome="Iraneide" ></FamiliaMembro>
+                        </Familia>
+
+                    </Card>
+
+                    <Card titulo="#04 Repetição alunos">
+                        <ListaAlunos></ListaAlunos>
+
+                    </Card>
+                    <Card titulo="#05 Repetição produtos">
+                        <TabelaProdutos></TabelaProdutos>
+
+                    </Card>
+                </div>
             </div>
         )
     }
