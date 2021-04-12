@@ -8,6 +8,8 @@ import Familia from './components/Familia'
 import FamiliaMembro from './components/FamiliaMembro'
 import ListaAlunos from './components/repeticao/ListaAlunos'
 import TabelaProdutos from './components/repeticao/TabelaProdutos'
+import ParOuImpar from './components/condicional/ParOuImpar'
+import Contador from './components/contador/Contador'
 
 class App extends Component {
     state = {
@@ -59,9 +61,17 @@ class App extends Component {
                         <ListaAlunos></ListaAlunos>
 
                     </Card>
-                    <Card titulo="#05 Repetição produtos">
+                    <Card titulo="#05 Repetição produtos" color="#D2691E">
                         <TabelaProdutos></TabelaProdutos>
 
+                    </Card>
+
+                    <Card titulo="#06 Condicional" color="#8B4513">
+                        <ParOuImpar numero={3}></ParOuImpar>
+                    </Card>
+
+                    <Card titulo="#07 Contador" color="#8B4513">
+                         <Contador></Contador>
                     </Card>
                 </div>
             </div>
