@@ -8,7 +8,7 @@ export default props => {
         }}>
 
             <button onClick={props.incrementar}>Incrementar</button>
-            <button onClick={props.decrementar}>Incrementar</button>
+            <button onClick={props.decrementar}>Decrementar</button>
         </div>
     )
 }

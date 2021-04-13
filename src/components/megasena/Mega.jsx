@@ -6,26 +6,27 @@ export default (props) => {
     let numerosIniciais = Array(qtdNumero).fill(0)
     let [numeros, setNumeros] = useState(numerosIniciais)
 
-    const setQtdNumeros = (e) => {
+    let setQtdNumeros = (e) => {
         setQtd(e.target.value)
     }
 
-    const geraNumeros = () => {
-        numeros = []
-        for (let i = 0; i < qtdNumero; i++) {
-            let numero = parseInt(Math.random() * (60 - 1)) + 1
+   function gerarNumeroDiferente (min, max, array) {
+        const nAleatorio = parseInt(Math.random() * (max - min)) + min;
 
-            while (numeros.indexOf(numero) >= 0) {
-                numero = parseInt(Math.random() * (60 - 1)) + 1
-            }
-            console.log(numero)
-            numeros.push(numero)
-            // console.log([...numeros, numero])
-            // setNumeros([...numeros, numero])
-        }
-        console.log("NUMEROS", numeros)
-        // setNumeros([])
+        return array.includes(nAleatorio) ? gerarNumeroDiferente : nAleatorio
     }
+
+    function gerarNumeros (qtde) {
+        console.log('qtde', qtde)
+        let numeros = []
+        for(let i = 0; i < qtde; i++){
+            numeros.push(gerarNumeroDiferente(1,60, numeros) + ' ')
+        }
+
+        console.log(numeros)
+        setNumeros(numeros.sort((n1,n2) => n1 - n2) )
+    }
+
 
     return (
         <div>
@@ -33,18 +34,11 @@ export default (props) => {
             <p>Quantos Numeros gerar?</p>
             <div style={{ display: 'flex' }}>
                 <input type="number" id="inputMega" value={qtdNumero} onChange={setQtdNumeros} />
-                <button onClick={ _ =>
-                    geraNumeros
-                }>Gerar</button>
+                <button onClick={_ => gerarNumeros(qtdNumero)}>Gerar</button>
             </div>
-           <div>
-               h 
-           {
-                console.log("Numeros2", numeros)
-                // numeros.map((numero, i) =>
-                //     <p key={i}>{numero} </p>)
-            }
-           </div>
+            <div style={{display: 'flex', justifyContent: 'center'}}>
+                <h3>{numeros}</h3>
+            </div>
 
 
         </div>
