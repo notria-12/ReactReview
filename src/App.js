@@ -11,6 +11,7 @@ import TabelaProdutos from './components/repeticao/TabelaProdutos'
 import ParOuImpar from './components/condicional/ParOuImpar'
 import Contador from './components/contador/Contador'
 import Mega from './components/megasena/Mega'
+import Calculator from './components/calculadora/Calculator'
 
 class App extends Component {
     state = {
@@ -75,8 +76,11 @@ class App extends Component {
                          <Contador numeroInicial={23}></Contador>
                     </Card>
                    
-                    <Card titulo="#07 MegaSena" color="	#9ACD32">
+                    <Card titulo="#08 MegaSena" color="	#9ACD32">
                          <Mega></Mega>
+                    </Card>
+                    <Card titulo="#09 Calculadora" color="#8B4513" >
+                         <Calculator></Calculator>
                     </Card>
                 </div>
             </div>
