@@ -1,5 +1,7 @@
-.container .cards{
+.main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    height: 100vh;
+    /* justify-content: center; */
+    /* background-color: blue; */
 }

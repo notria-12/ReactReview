@@ -1,0 +1,35 @@
+.menu{
+    background-color: rgb(135, 170, 235);
+    width: 200px;
+}
+
+.menu nav{
+    padding: 10px;
+    display: flex;
+    justify-content: flex-starts;
+}
+
+.menu nav ul{
+    padding: 0px;
+}
+
+
+.menu nav ul li{
+    list-style: none;
+    padding: 5px 0;
+    
+}
+
+.menu nav ul li a{
+    text-decoration: none;
+    padding: 10px;
+    /* outline-style: none; */
+    color: #fff;
+
+}
+
+.menu nav ul li:hover{
+    
+    background-color: rgb(13, 120, 207);
+}
+
