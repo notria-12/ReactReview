@@ -22,13 +22,14 @@ export default class Calculator extends Component {
 
     setOperation(operation) {
         const values = [...this.state.values]
-        
+
         if (this.state.current === 0) {
             this.setState({ current: 1, clearDisplay: true, operation })
-        }
+        } else {
+            let equals = operation === '='
 
-        if (this.state.operation !== null && operation === '=' && values[0] !== 0 && values[1] !== 0) {
             let result = null;
+
             switch (this.state.operation) {
                 case '+':
                     result = values[0] + values[1]
@@ -46,8 +47,14 @@ export default class Calculator extends Component {
                     break;
             }
 
-            this.setState({displayValue: result})
+            values[0] = result;
+            values[1] = 0
+
+            this.setState({ displayValue: values[0], operation: equals ? null : operation, current: equals ? 0 : 1, clearDisplay: !equals, values })
+
         }
+
+
 
 
 
